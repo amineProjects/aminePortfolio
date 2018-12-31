@@ -1,0 +1,39 @@
+.wrapper{
+	max-width: $main-max-width;
+	max-width: get-vw($main-max-width);
+	margin: 0 auto;
+}
+.row{
+
+	&--with-gutter:not(:last-child){
+		margin-bottom: $gutter-vertical;
+		margin-bottom: get-vw($gutter-vertical);
+	}
+	&::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@include respond(tab-port){
+
+	[class^="col-"]{
+
+			float: left;
+
+			&:not(:last-child){
+				margin-right: $gutter-horizontal;
+				margin-right: get-vw($gutter-horizontal);
+			}
+
+	}
+}
+
+@include respond(tab-port){
+	/* the grid for website exp:
+	.col-2-of-4-md{
+		@include col-width(2,$gutter-horizontal,4);
+	}*/
+
+}
