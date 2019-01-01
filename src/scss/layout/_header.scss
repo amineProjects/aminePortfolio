@@ -1,0 +1,28 @@
+.header{
+	background-color: $white;
+	padding: 3.8rem 0;
+	padding: get-vw(38px);
+
+	&__nav{
+		text-align: right;
+		& a{
+			text-transform: uppercase;
+			margin-left: 1rem;
+			margin-left: get-vw(10px);
+			font-family: $main-title-font;
+			font-weight: 500;
+			font-size: 1.2rem;
+			@include respond(tab-land){
+				font-size: get-vw(12px);
+			}
+			&:hover,
+			&:active{
+				color: $main-dark-blue;
+			}
+		}
+	}
+
+}
+.active{
+	color: $main-blue;
+}
