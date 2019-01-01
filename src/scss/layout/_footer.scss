@@ -1,0 +1,29 @@
+.footer{
+	background-color: $black;
+	padding: get-vw($padding) 0;
+	color: $gray;
+	font-size: 1.5rem;
+	@include respond(tab-land){
+		font-size: get-vw(15px);
+	}
+	&__nav{
+		text-align: center;
+	}
+	&__media{
+		text-align: right;
+	}
+	&__link{
+		color: $gray;
+		display: list-item;
+		list-style: none;
+		&:hover{
+			color: $white;
+		}
+	}
+	&__copyright{
+		margin-top: .5rem;
+		& span{
+			display: table;
+		}
+	}
+}
