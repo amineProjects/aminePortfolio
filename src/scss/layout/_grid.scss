@@ -6,8 +6,8 @@
 .row{
 
 	&--with-gutter:not(:last-child){
-		margin-bottom: $gutter-vertical;
-		margin-bottom: get-vw($gutter-vertical);
+		margin-bottom: $gutter-horizontal;
+		margin-bottom: get-vw($gutter-horizontal);
 	}
 	&::after{
 		content: "";
@@ -23,8 +23,8 @@
 			float: left;
 
 			&:not(:last-child){
-				margin-right: $gutter-horizontal;
-				margin-right: get-vw($gutter-horizontal);
+				margin-right: $gutter-vertical;
+				margin-right: get-vw($gutter-vertical);
 			}
 
 	}

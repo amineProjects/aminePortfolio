@@ -11,8 +11,8 @@ html{
 }
 
 body{
-	padding: get-vw($main-padding);
 	box-sizing: border-box;
+	background-color: $body-bg;
 }
 
 img{
