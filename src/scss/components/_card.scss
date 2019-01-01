@@ -1,0 +1,31 @@
+.card{
+	position: relative;
+
+	&:hover,
+	&:active{
+		.card__overlay{
+			opacity: 1;
+		}
+	}
+	&__overlay{
+		// display: none;
+		background-color: $main-blue;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	&__link{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		& img{
+			max-width: 48px;
+			max-height: 30px;
+		}
+	}
+}

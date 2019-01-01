@@ -28,13 +28,26 @@
 			}
 
 	}
-}
-
-@include respond(tab-port){
+.col-1-of-4-md{
+		@include col-width(1,$gutter-vertical,4);
+		&--no-gutter{
+			@include col-width(1,0px,4);
+			&[class^="col-"]{
+				margin-right: 0;
+			}
+		}
+	}
 .col-1-of-2-md{
 		@include col-width(1,$gutter-vertical,2);
 	}
 .col-1-of-3-md{
 		@include col-width(1,$gutter-vertical,3);
+		&--no-gutter{
+			@include col-width(1,0px,3);
+			&[class^="col-"]{
+				margin-right: 0;
+			}
+		}
 	}
 }
+
