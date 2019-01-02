@@ -1,0 +1,66 @@
+.about{
+		font-family: $main-title-font;
+	&__statistics{
+		display: none; // will be displaied when there is some stats
+		padding: get-vw($padding) 0;
+		background-color: $main-blue;
+		font-weight: 500;
+		color: $white;
+	}
+	&__icon{
+			font-size: 3.8rem;
+			@include respond(tab-land){
+				font-size: get-vw(38px);
+			}
+		}
+	&__stat{
+
+		&-number{
+			font-size: 1.8rem;
+			@include respond(tab-land){
+				font-size: get-vw(18px);
+			}
+		}
+		&-title{
+			font-size: 1.5rem;
+			@include respond(tab-land){
+				font-size: get-vw(15px);
+			}
+		}
+	}
+	&__me{
+		border-top: 10px solid $main-blue;// delete it after statistcs are dsiplaied.
+		&-description{
+			padding-top: 14rem;
+			padding-left: 9rem;
+			@include respond(tab-land){
+				padding-top: get-vw(140px);
+				padding-right: get-vw(90px);
+			}
+		}
+		&-title{
+			font-size: 3rem;
+			font-weight: 500;
+			margin-bottom: 3.4rem;
+			@include respond(tab-land){
+				font-size: get-vw(30px);
+				margin-bottom: get-vw(34px);
+			}
+		}
+		&-paragraph{
+			font-family: $main-font;
+			font-size: 1.6rem;
+			color: $gray;
+			@include respond(tab-land){
+				font-size: get-vw(16px);
+			}
+		}
+	}
+	&__call-to-action{
+		background-color: $white;
+		text-align: center;
+		padding: $padding 0;
+	}
+
+
+}

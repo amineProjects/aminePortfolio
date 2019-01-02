@@ -23,9 +23,12 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%);
-		& img{
-			max-width: 48px;
-			max-height: 30px;
+		& i{
+			font-size: 3rem;
+			@include respond(tab-land){
+				font-size: get-vw(50px);
+			}
+			color: $white;
 		}
 	}
 }
