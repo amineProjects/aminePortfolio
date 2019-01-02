@@ -13,7 +13,8 @@ import {classie} from './classie';
 
       function init(){
         initEvent();
-        navigate(current=0);
+        current=setCurrent();
+        navigate(current);
       }
 
       function initEvent(){
@@ -30,7 +31,11 @@ import {classie} from './classie';
         });
       }
 
-      function navigate(direction){
+      function setCurrent(){
+        return window.localStorage.getItem('current');
+      }
+
+      function navigate(direction=0){
         if(direction==='right'){
           current= current < slidesTotal? current + 1: 0;
         }else if(direction === 'left'){
