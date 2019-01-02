@@ -1,0 +1,23 @@
+.slider{
+	position: relative;
+	// z-index: 200;
+	width: 100%;
+	// text-align: center;
+	user-select: none;
+
+	&__slide{
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		width: 100%;
+		opacity: 0;
+		text-align: left;
+
+		&--current{
+			position: relative;
+			z-index: 100;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

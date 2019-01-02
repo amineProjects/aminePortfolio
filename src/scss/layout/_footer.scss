@@ -8,6 +8,10 @@
 	}
 	&__nav{
 		text-align: center;
+		& nav{
+			display: inline-block;
+			text-align: left;
+		}
 	}
 	&__media{
 		text-align: right;

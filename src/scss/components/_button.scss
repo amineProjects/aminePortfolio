@@ -19,4 +19,47 @@
 		background-color: $main-blue;
 		margin-top: get-vw(38px);
 	}
+	&--prev,
+	&--next{
+		font-family: $main-title-font;
+		font-size: 1.2rem;
+		@include respond(tab-land){
+			font-size: get-vw(12px);
+		}
+		font-weight: 500;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+	}
+	&--prev{
+		@include respond(tab-land){
+			text-align: left;
+		}
+	}
+	&--next{
+		@include respond(tab-land){
+			text-align: right;
+		}
+	}
+	&--all{
+		text-align: center;
+		font-size: 2rem;
+		@include respond(tab-land){
+			font-size: get-vw(20px);
+		}
+		color: $black;
+		display: block;
+		@include respond(tab-land){
+			padding-left: get-vw(66.5px);
+		}
+	}
+	&--prev,
+	&--next,
+	&--all{
+		&:hover,
+		&:active{
+			color: $main-blue;
+		}
+	}
+
 }

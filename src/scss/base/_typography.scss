@@ -14,14 +14,15 @@ body{
 .title{
 	font-size: 3rem;
 	font-weight: 500;
-	margin-bottom: 3.4rem;
+	margin-bottom: 2rem;
 	@include respond(tab-land){
 		font-size: get-vw(30px);
-		margin-bottom: get-vw(34px);
+		margin-bottom: get-vw(20px);
 	}
 }
 .paragraph{
 	font-family: $main-font;
+	font-weight: normal;
 	font-size: 1.6rem;
 	color: $gray;
 	@include respond(tab-land){
