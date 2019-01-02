@@ -11,3 +11,20 @@ body{
 	position: fixed;
 	top: 200%;
 }
+.title{
+	font-size: 3rem;
+	font-weight: 500;
+	margin-bottom: 3.4rem;
+	@include respond(tab-land){
+		font-size: get-vw(30px);
+		margin-bottom: get-vw(34px);
+	}
+}
+.paragraph{
+	font-family: $main-font;
+	font-size: 1.6rem;
+	color: $gray;
+	@include respond(tab-land){
+		font-size: get-vw(16px);
+	}
+}

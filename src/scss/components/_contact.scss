@@ -1,0 +1,28 @@
+.contact{
+	padding: $padding 0;
+	& input{
+		width: 100%;
+		font-family: 'Pe-icon-7-stroke';
+		font-size: 1.5rem;
+		padding: get-vw(6px) get-vw(10px);
+		border: none;
+	}
+	&__title{
+		margin-block-end: 1rem;
+	}
+	&__form{
+		&-label{
+			display: block;
+			font-size: 1.2rem;
+			font-family: $main-title-font;
+			margin: get-vw(6px) 0;
+		}
+	}
+	&__message{
+		padding: get-vw(6px) get-vw(10px);
+		font-family: 'Pe-icon-7-stroke';
+		width: 100%;
+		border: none;
+		font-size: 1.5rem;
+	}
+}
