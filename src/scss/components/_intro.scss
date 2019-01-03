@@ -1,17 +1,20 @@
 .intro{
-		text-align: center;
-		text-transform: capitalize;
-		max-height: 33.3rem;
-		max-height: get-vw(333px);
-		padding: 10rem 0;
-		padding: get-vw(100px) 0;
-
-		color: $white;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	text-transform: capitalize;
+	max-height: 33.3rem;
+	max-height: get-vw(333px);
+	padding: 10rem 0;
+	padding: get-vw(100px) 0;
+	color: $white;
 	&--home{
 		background-image: url(../../src/images/programming-monitor.jpg);
+		background-size: cover;
 	}
 	&--about{
 		background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/programming-monitor.jpg);
+		background-size: cover;
 	}
 	&__title{
 		font-family: $main-title-font, sans-serif;
