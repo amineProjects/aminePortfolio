@@ -9,15 +9,7 @@ module.exports={
         use: {
           loader: "babel-loader"
         }
-      },
-      {
-        test: /\.html$/
       }
     ]
-  },
-  plugins:[
-    new HtmlWebpackPlugin({
-      template: "./index.html"
-    })
-  ]
+  }
 };
