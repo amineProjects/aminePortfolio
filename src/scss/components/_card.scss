@@ -4,11 +4,10 @@
 	&:hover,
 	&:active{
 		.card__overlay{
-			opacity: 1;
+			opacity: .7;
 		}
 	}
 	&__overlay{
-		// display: none;
 		background-color: $main-blue;
 		position: absolute;
 		top: 0;
