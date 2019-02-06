@@ -32,10 +32,10 @@ import {classie} from './classie';
       }
 
       function setCurrent(){
-        return window.localStorage.getItem('current');
+        return parseInt(window.localStorage.getItem('current'));
       }
 
-      function navigate(direction=0){
+      function navigate(direction=0){console.log(current);
         if(direction==='right'){
           current= current < slidesTotal? current + 1: 0;
         }else if(direction === 'left'){
@@ -43,6 +43,7 @@ import {classie} from './classie';
         }else{
           current=direction;
         }
+
         slides.forEach(slide => {
           classie.remove(slide,'slider__slide--current');
         });
