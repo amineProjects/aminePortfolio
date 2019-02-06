@@ -1,0 +1,79 @@
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module parse failed: Unexpected token   (1:0)
+  You may need an appropriate loader to   handle this file type.
+  > <!-- <div class="wrapper row">
+  |  <div class="col-1-of-2-md logo">
+  |  <a href="#" class="btn">:
+  SyntaxError: Unexpected token (1:0)
+  Module parse failed: Unexpected token   (1:1)
+  You may need an appropriate loader to   handle this file type.
+  >  <!-- <div class="wrapper row">
+  |  <div class="col-1-of-3-md row">
+  |  <div class=" logo">:
+  SyntaxError: Unexpected token (1:1)
+  
+  - compiler.js:79 childCompiler.runAsC    hild
+    [aminePortfolio]/[html-webpack-plug    in]/lib/compiler.js:79:16
+  
+  - Compiler.js:296 compile
+    [aminePortfolio]/[webpack]/lib/Comp    iler.js:296:11
+  
+  - Compiler.js:552 hooks.afterCompile.    callAsync.err
+    [aminePortfolio]/[webpack]/lib/Comp    iler.js:552:14
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compiler.js:549 compilation.seal.er    r
+    [aminePortfolio]/[webpack]/lib/Comp    iler.js:549:30
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compilation.js:1323 hooks.optimizeA    ssets.callAsync.err
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1323:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compilation.js:1314 hooks.optimizeC    hunkAssets.callAsync.err
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1314:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compilation.js:1309 hooks.additiona    lAssets.callAsync.err
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1309:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compilation.js:1305 hooks.optimizeT    ree.callAsync.err
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1305:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
+    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
+  
+  - Compilation.js:1242 Compilation.sea    l
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1242:27
+  
+  - Compiler.js:546 hooks.make.callAsyn    c.err
+    [aminePortfolio]/[webpack]/lib/Comp    iler.js:546:17
+  
+  
+  - Compilation.js:1093 _addModuleChain    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1093:12
+  
+  - Compilation.js:1005 processModuleDe    pendencies.err
+    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1005:9
+  
+  - next_tick.js:61 process._tickCallba    ck
+    internal/process/next_tick.js:61:11  
+</pre><script type="text/javascript" src="../js/index.js"></script>
