@@ -8,17 +8,25 @@
 	}
 	&__nav{
 		text-align: center;
+		margin: 1rem 0;
 		& nav{
 			display: inline-block;
 			text-align: left;
 		}
 	}
 	&__media{
-		text-align: right;
+		text-align: center;
+		margin-bottom: 2rem;
+		@include respond(tab-land){
+			text-align: right;
+		}
 	}
 	&__link{
 		color: $gray;
-		display: list-item;
+		margin-right: 1rem;
+		@include respond(tab-land){
+			display: list-item;
+		}
 		list-style: none;
 		&:hover{
 			color: $white;
