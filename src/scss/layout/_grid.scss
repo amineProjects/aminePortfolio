@@ -2,6 +2,9 @@
 	max-width: $main-max-width;
 	max-width: get-vw($main-max-width);
 	margin: 0 auto;
+	&--vertical{
+		padding: 5rem;
+	}
 }
 .row{
 
