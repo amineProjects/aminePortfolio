@@ -29,10 +29,9 @@
 		}
 	}
 	&__me{
-		border-top: 10px solid $main-blue;// delete it after statistcs are dsiplaied.
+		border-top: 10px solid $main-blue;// delete it after stats are dsiplaied.
 		&-description{
-			padding-top: 14rem;
-			padding-left: 9rem;
+			padding: $padding 1rem;
 			@include respond(tab-land){
 				padding-top: get-vw(140px);
 				padding-right: get-vw(90px);
@@ -42,7 +41,7 @@
 	&__call-to-action{
 		background-color: $white;
 		text-align: center;
-		padding: $padding 0;
+		padding: $padding 1rem;
 	}
 
 

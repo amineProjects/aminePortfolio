@@ -7,11 +7,28 @@
 	padding: get-vw(100px) 0;
 	color: $white;
 	&--home{
-		background-image: url(../../src/images/programming-monitor.jpg);
+		@include respond(phone){
+			background-image: url(../../src/images/hero-bg-phone.jpg);
+		}
+		@include respond(tab-port){
+			background-image: url(../../src/images/hero-bg-tab-land.jpg);
+		}
+		@include respond(tab-land){
+			background-image: url(../../src/images/hero-bg.jpg);
+		}
+
 		background-size: cover;
 	}
 	&--about{
-		background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/programming-monitor.jpg);
+		@include respond(phone){
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg-phone.jpg);
+		}
+		@include respond(tab-port){
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg-tab-land.jpg);
+		}
+		@include respond(tab-land){
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg.jpg);
+		}
 		background-size: cover;
 	}
 	&__title{
