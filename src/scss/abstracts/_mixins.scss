@@ -12,6 +12,9 @@
 > 1800px Big desktop
 */
 @mixin respond($breakpoint) {
+	@if $breakpoint == phone{
+		@media (max-width: get-em(600px)) {@content};
+	}
 	@if $breakpoint == tab-port{
 		@media (min-width: get-em(601px)) {@content};
 	}
