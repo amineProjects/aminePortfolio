@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("(function (global) {\n  var work = document.querySelector(\".home__work\"),\n      cards = [].slice.call(work.querySelectorAll(\".card__link\"));\n  cards.forEach(function (card) {\n    card.addEventListener('click', function (e) {\n      console.log(e.target);\n      setSlide(e.target);\n    }, false);\n  });\n\n  function setSlide(target) {\n    var slidNumber = parseInt(target.id);\n    global.localStorage.setItem('current', slidNumber);\n  }\n})(window);\n\n//# sourceURL=webpack:///./src/js/currentSlide.js?");
+eval("(function (global) {\n  var work = document.querySelector(\".home__work\"),\n      cards = [].slice.call(work.querySelectorAll(\".card__link\"));\n  cards.forEach(function (card) {\n    card.addEventListener('click', function (e) {\n      console.log(e.target);\n      setSlide(e.target);\n    }, false);\n  });\n\n  function setSlide(target) {\n    console.log(target.id);\n    var slidNumber = parseInt(target.id);\n    global.localStorage.setItem('current', slidNumber);\n  }\n})(window);\n\n//# sourceURL=webpack:///./src/js/currentSlide.js?");
 
 /***/ })
 

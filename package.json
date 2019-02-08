@@ -9,10 +9,10 @@
     "bundel:pro": "webpack --config webpack.config.js --mode production  ",
     "build:dev": "run-s lint lint-scss bundel:dev",
     "build": "run-s lint lint-scss bundel:pro",
-    "serve": "browser-sync start --server --index \"dist/index.html\" --files \"dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\"",
-    "watch": "onchange \"src/js\" \"src/scss\" -- run-s build:div",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "watch": "onchange \"src/js\" \"src/scss\" \"src/index.html\" \"src/pages\" -- run-s build:dev",
     "start": "run-p serve watch",
-    "test": "run-s build start",
+    "test": "run-s build serve",
     "postinstall": "run-s build:div start"
   },
   "devDependencies": {
