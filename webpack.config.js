@@ -84,6 +84,23 @@ module.exports=(env,argv) =>({
       disable: argv.mode == 'development',
       pngquant:({quality: '60'}),
       plugins: [imageminMozjpeg({quality: '60'})]
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: './src/icons',
+      to: '../icons'
+    },
+    {
+      from: './src/browserconfig.xml',
+      to: '../'
+    },
+    {
+      from: './src/favicon.ico',
+      to: '../'
+    },
+    {
+      from: './src/manifest.json',
+      to: '../'
+    }
+    ]),
   ]
 });
