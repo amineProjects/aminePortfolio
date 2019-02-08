@@ -1,79 +1,126 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module parse failed: Unexpected token   (1:0)
-  You may need an appropriate loader to   handle this file type.
-  > <!-- <div class="wrapper row">
-  |  <div class="col-1-of-2-md logo">
-  |  <a href="#" class="btn">:
-  SyntaxError: Unexpected token (1:0)
-  Module parse failed: Unexpected token   (1:1)
-  You may need an appropriate loader to   handle this file type.
-  >  <!-- <div class="wrapper row">
-  |  <div class="col-1-of-3-md row">
-  |  <div class=" logo">:
-  SyntaxError: Unexpected token (1:1)
-  
-  - compiler.js:79 childCompiler.runAsC    hild
-    [aminePortfolio]/[html-webpack-plug    in]/lib/compiler.js:79:16
-  
-  - Compiler.js:296 compile
-    [aminePortfolio]/[webpack]/lib/Comp    iler.js:296:11
-  
-  - Compiler.js:552 hooks.afterCompile.    callAsync.err
-    [aminePortfolio]/[webpack]/lib/Comp    iler.js:552:14
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compiler.js:549 compilation.seal.er    r
-    [aminePortfolio]/[webpack]/lib/Comp    iler.js:549:30
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compilation.js:1323 hooks.optimizeA    ssets.callAsync.err
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1323:35
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compilation.js:1314 hooks.optimizeC    hunkAssets.callAsync.err
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1314:32
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compilation.js:1309 hooks.additiona    lAssets.callAsync.err
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1309:36
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compilation.js:1305 hooks.optimizeT    ree.callAsync.err
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1305:32
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCom    pileHook
-    [aminePortfolio]/[tapable]/lib/Hook    .js:154:20
-  
-  - Compilation.js:1242 Compilation.sea    l
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1242:27
-  
-  - Compiler.js:546 hooks.make.callAsyn    c.err
-    [aminePortfolio]/[webpack]/lib/Comp    iler.js:546:17
-  
-  
-  - Compilation.js:1093 _addModuleChain    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1093:12
-  
-  - Compilation.js:1005 processModuleDe    pendencies.err
-    [aminePortfolio]/[webpack]/lib/Comp    ilation.js:1005:9
-  
-  - next_tick.js:61 process._tickCallba    ck
-    internal/process/next_tick.js:61:11  
-</pre><script type="text/javascript" src="../js/index.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>amine protfolio | My projects</title>
+	<link rel="stylesheet" href="../../dist/css/pe-icon-7-stroke.css">
+	<link rel="stylesheet" href="../../dist/css/style.css">
+</head>
+<body>
+<header class="header">
+	<div class="wrapper row">
+		<div class="col-1-of-2-md logo">
+			<a href="../../index.html" class="btn">
+				<img src="../images/logoBlack.png" alt="logo">
+			</a>
+			<p class="text-hidden">amine protfolio</p>
+		</div>
+		<nav class="header__nav">
+			<a href="../../index.html" class="header__link ">Home</a>
+			<a href="about.html" class="header__link">About</a>
+			<a href="contact.html" class="header__link">Contact</a>
+		</nav>
+	</div>
+</header>
+<main>
+	<div class="work">
+		<div class="slider">
+			<div class="row  slider__slide ">
+				<div class="col-1-of-2-md work__detail">
+					<h2 class="title work__title">Rectilinear motion simulator</h2>
+					<p class="paragraph">
+						mo7akate (محاكاة) mean simulation, this website is a simpl simulation of a rectilinear motion of toy car on a table, where you can change the car weight, the time and get the graph of the velocity and the distence. I created this projecte because  I am a physics teacher in high school.
+					</p>
+					<ul class="work__info">
+						<li >Client: <span class="paragraph">my self</span></li>
+						<li>Date: <span class="paragraph">march/2018
+</span></li>
+						<li>Link: <a href="http://mo7akate.tk/" class="paragraph" target="blank">http://mo7akate.tk/</a></li>
+					</ul>
+				</div>
+				<div class="col-1-of-2-md">
+					<img src="/src/images/work-detail-1.jpg" alt="work 1">
+				</div>
+			</div> <!--work slid end-->
+			<div class="row  slider__slide ">
+				<div class="col-1-of-2-md work__detail">
+					<h2 class="title work__title">MI-Talent</h2>
+					<p class="paragraph">
+						This website is designed by tranmautritam, because I am not good with designing a website. I use free design to practice pixel perfect PSD to HTML.
+					</p>
+					<ul class="work__info">
+						<li >Client: <span class="paragraph">my self</span></li>
+						<li>Date: <span class="paragraph">december/2018</span></li>
+						<li>Link: <a href="https://mi-talent.ml/" target="blank" class="paragraph">https://mi-talent.ml/</a></li>
+					</ul>
+				</div>
+				<div class="col-1-of-2-md">
+					<img src="/src/images/work-detail-2.jpg" alt="work 1">
+				</div>
+			</div> <!--work slid end-->
+			<div class="row  slider__slide ">
+				<div class="col-1-of-2-md work__detail">
+					<h2 class="title work__title">Abdelhamid Benbadis</h2>
+					<p class="paragraph">
+						It is a website created for the freeCodeCamp challenge (build a Tribute page). In this challenge I try to use only html and css that I learned in the course.
+					</p>
+					<ul class="work__info">
+						<li >Client: <span class="paragraph">my self</span></li>
+						<li>Date: <span class="paragraph">november/2018</span></li>
+						<li>Link: <a href="https://abdelhamidbenbadis.tk/" target="blank" class="paragraph">https://abdelhamidbenbadis.tk/</a></li>
+					</ul>
+				</div>
+				<div class="col-1-of-2-md">
+					<img src="/src/images/work-detail-3.jpg" alt="work 1">
+				</div>
+			</div> <!--work slid end-->
+
+			<div class=" work__nav">
+				<div class="wrapper row">
+					<div class="col-1-of-3-md">
+						<button class="btn btn--prev">&#60; previous project</button>
+					</div>
+					<div class="col-1-of-3-md">
+						<a class="btn btn--all" href="../../index.html"><i class="pe-7s-photo-gallery"></i></a>
+					</div>
+					<div class="col-1-of-3-md">
+						<button class="btn btn--next">next project &#62;</button>
+					</div>
+				</div> <!--wrapper and row end-->
+			</div> <!--work navigation-->
+		</div> <!--slider end-->
+	</div> <!--work end-->
+</main>
+<footer class="footer">
+	<div class="wrapper row">
+		<div class="col-1-of-3-md row">
+			<div class=" logo">
+				<a href="../../index.html" class="btn">
+					<img src="../images/logoWhite.png" alt="logo">
+				</a>
+				<p class="text-hidden">amine protfolio</p>
+			</div>
+			<div class=" footer__copyright">
+				<p >© 2018 amine. All rights reserved.<span>Developed by benahmed mohammed amine.</span></p>
+			</div>
+		</div>
+		<div class="col-1-of-3-md footer__nav">
+			<nav >
+				<a href="about.html" class="footer__link">About</a>
+				<a href="contact.html" class="footer__link">Contact</a>
+				<a href="credit.html" class="footer__link">Credit</a>
+			</nav>
+		</div>
+		<div class="col-1-of-3-md footer__media">
+			<a href="https://www.linkedin.com/in/mohammed-amine-benahmed-b7838917b/" target="blank" class="footer__link">LinkedIn</a>
+			<a href="https://github.com/amineProjects/" target="blank" class="footer__link">GitHub</a>
+			<!-- <a href="" class="footer__link">Facebook</a>
+			<a href="" class="footer__link">Twitter</a> -->
+		</div>
+	</div>
+</footer>
+<script src="../../dist/js/main.js"></script>
+</body>
+</html>
