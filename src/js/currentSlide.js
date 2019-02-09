@@ -10,7 +10,7 @@
         setSlide(e.target);
       } ,false);
     });
-    function setSlide(target){console.log(target.id);
+    function setSlide(target){
       var slidNumber= parseInt(target.id);
       global.localStorage.setItem('current',slidNumber);
     }

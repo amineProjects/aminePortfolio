@@ -8,8 +8,9 @@ const CopyWebpackPlugin= require("copy-webpack-plugin");
 
 module.exports=(env,argv) =>{
 
-  let clean= new CleanWebpackPlugin('dist',{beforeEmit: true});
-  let plugins= [
+  let Paths={dev:['dist/js/','dist/css/'],pro:['dist']},
+      clean,
+      plugins= [
       new MiniCssExtractPlugin({
         filename: "../css/style.[contenthash].css"
       }),
@@ -66,14 +67,21 @@ module.exports=(env,argv) =>{
         to: '../'
       },
       {
+        from: './src/fonts',
+        to: '../fonts'
+      },
+      {
         from: './src/manifest.json',
         to: '../'
       }
       ])];
 
-      if(argv.mode !== 'development'){
-        plugins.unshift(clean);
+      if(argv.mode == 'development'){
+       clean=new CleanWebpackPlugin(Paths.dev,{beforeEmit: true});
+      }else{
+        clean=new CleanWebpackPlugin(Paths.pro,{beforeEmit: true});
       }
+      plugins.unshift(clean);
 
    return {
     entry: {
@@ -109,7 +117,6 @@ module.exports=(env,argv) =>{
       ]
     },
     plugins: plugins
-
   }
 
 };

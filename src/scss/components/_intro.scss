@@ -8,26 +8,26 @@
 	color: $white;
 	&--home{
 		@include respond(phone){
-			background-image: url(../../src/images/hero-bg-phone.jpg);
+			background-image: url(../images/hero-bg-phone.jpg);
 		}
 		@include respond(tab-port){
-			background-image: url(../../src/images/hero-bg-tab-land.jpg);
+			background-image: url(../images/hero-bg-tab-land.jpg);
 		}
 		@include respond(tab-land){
-			background-image: url(../../src/images/hero-bg.jpg);
+			background-image: url(../images/hero-bg.jpg);
 		}
 
 		background-size: cover;
 	}
 	&--about{
 		@include respond(phone){
-			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg-phone.jpg);
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../images/hero-bg-phone.jpg);
 		}
 		@include respond(tab-port){
-			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg-tab-land.jpg);
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../images/hero-bg-tab-land.jpg);
 		}
 		@include respond(tab-land){
-			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../../src/images/hero-bg.jpg);
+			background-image: linear-gradient(rgba($black,.7),rgba($black,.7)), url(../images/hero-bg.jpg);
 		}
 		background-size: cover;
 	}
