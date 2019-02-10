@@ -8,11 +8,12 @@
     "bundel:dev": "webpack --config webpack.config.js --mode development",
     "bundel:pro": "webpack --config webpack.config.js --mode production",
     "build:dev": "run-s lint lint-scss bundel:dev",
-    "build": "run-s lint lint-scss bundel:pro",
+    "build:pro": "run-s lint lint-scss bundel:pro",
     "serve": "browser-sync start --server \"dist\" --files \"dist/css/*.css, dist/js/*.js, **/*.html\"",
     "reload": "browser-sync reload",
     "watch": "onchange \"src/js\" \"src/scss\" \"src/index.html\" \"src/pages\" -- run-s build:dev",
     "start": "run-p serve watch",
+    "build": "run bundel:pro",
     "postinstall": "run-s build:dev start"
   },
   "devDependencies": {
