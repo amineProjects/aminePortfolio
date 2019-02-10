@@ -1,4 +1,4 @@
 [build]
-base="aminePortfolio/"
-publish= "aminePortfolio/dist/"
+base="/"
+publish= "dist/"
 command= "npm build"
