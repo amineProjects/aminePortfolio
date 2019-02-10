@@ -14,7 +14,7 @@
     "watch": "onchange \"src/js\" \"src/scss\" \"src/index.html\" \"src/pages\" -- run-s build:dev",
     "start": "run-p serve watch",
     "build": "run bundel:pro",
-    "postinstall": "webpack --config webpack.config.js --mode production"
+    "install": "webpack --config webpack.config.js --mode production"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
