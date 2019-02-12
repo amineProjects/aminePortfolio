@@ -5,15 +5,12 @@
   "scripts": {
     "lint-scss": "stylelint src/scss/*.scss --syntax scss || true",
     "lint": "eslint src/js || true",
-    "bundel:dev": "webpack --config webpack.config.js --mode development",
+    "bundel:dev": "webpack --config webpack.config.js --mode development --watch",
     "bundel:pro": "webpack --config webpack.config.js --mode production",
     "build:dev": "run-s lint lint-scss bundel:dev",
     "build:pro": "run-s lint lint-scss bundel:pro",
-    "serve": "browser-sync start --server \"dist\" --files \"dist/css/*.css, dist/js/*.js, **/*.html\"",
-    "reload": "browser-sync reload",
-    "watch": "onchange \"src/js\" \"src/scss\" \"src/index.html\" \"src/pages\" -- run-s build:dev",
-    "start": "run-p serve watch",
-    "build": "run bundel:pro",
+    "serve": "browser-sync start --server \"dist\" --files \"css/*.css, js/*.js, **/*.html\"",
+    "start": "run-p serve build:dev",
     "install": "webpack --config webpack.config.js --mode production"
   },
   "devDependencies": {
@@ -36,6 +33,7 @@
     "eslint-plugin-promise": "3.8.0",
     "eslint-plugin-standard": "3.1.0",
     "html-loader": "0.5.5",
+    "html-minifier": "^3.5.21",
     "html-webpack-plugin": "3.2.0",
     "imagemin-cli": "3.0.0",
     "imagemin-mozjpeg": "8.0.0",

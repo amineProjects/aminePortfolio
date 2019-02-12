@@ -8,39 +8,50 @@ const CopyWebpackPlugin= require("copy-webpack-plugin");
 
 module.exports=(env,argv) =>{
 
-  let Paths={dev:['dist/js/','dist/css/'],pro:['dist']},
+  let proMode=argv.mode == "production",
       clean,
+      minifySetting=proMode ?{
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      } : {},
+      postcssPlugins=[ require('autoprefixer')],
+      plugins;
+
       plugins= [
       new MiniCssExtractPlugin({
-        filename: "../css/style.[contenthash].css"
+        filename: proMode ? "../css/style.[contenthash].css" : "../css/style.css"
       }),
       new HtmlWebpackPlugin({
         inject:false,
-        hash:true,
+        minify:minifySetting,
         template: './src/pages/about.html',
         filename: '../pages/about.html'
       }),
       new HtmlWebpackPlugin({
         inject:false,
-        hash:true,
+        minify:minifySetting,
         template: './src/pages/contact.html',
         filename: '../pages/contact.html'
       }),
       new HtmlWebpackPlugin({
         inject:false,
-        hash:true,
+        minify:minifySetting,
         template: './src/pages/credit.html',
         filename: '../pages/credit.html'
       }),
       new HtmlWebpackPlugin({
         inject:false,
-        hash:true,
+        minify:minifySetting,
         template: './src/pages/work.html',
         filename: '../pages/work.html'
       }),
       new HtmlWebpackPlugin({
         inject:false,
-        hash:true,
+        minify:minifySetting,
         template: './src/index.html',
         filename: '../index.html'
       }),
@@ -76,12 +87,10 @@ module.exports=(env,argv) =>{
       }
       ])];
 
-      if(argv.mode == 'development'){
-       clean=new CleanWebpackPlugin(Paths.dev,{beforeEmit: true});
-      }else{
-        clean=new CleanWebpackPlugin(Paths.pro,{beforeEmit: true});
+      if(proMode){
+        clean=new CleanWebpackPlugin(['dist'],{beforeEmit: true});plugins.unshift(clean);
+        postcssPlugins.push(require('postcss-clean'));
       }
-      plugins.unshift(clean);
 
    return {
     entry: {
@@ -90,7 +99,7 @@ module.exports=(env,argv) =>{
     },
     output: {
       path: path.resolve(__dirname, './dist/js/'),
-      filename: '[name].[chunkhash].js'
+      filename: proMode ? '[name].[contenthash].js' : '[name].js'
     },
     module:{
       rules:[
@@ -110,7 +119,10 @@ module.exports=(env,argv) =>{
               loader: 'css-loader',
               options:{url:false}
             },
-            'postcss-loader',
+            {
+              loader:'postcss-loader',
+              options:{ plugins:postcssPlugins}
+            },
             'sass-loader'
           ]
         }
